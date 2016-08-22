@@ -38,6 +38,12 @@ Window {
         ListElement { effect: "LinearBlur" }
         ListElement { effect: "Swap" }
         ListElement { effect: "CrossHatch" }
+        ListElement { effect: "BurnOut" }
+        ListElement { effect: "Cube" }
+        ListElement { effect: "PageCurl" }
+        ListElement { effect: "GlitchDisplace" }
+        ListElement { effect: "DoomScreen" }
+        ListElement { effect: "Kaleidoscope" }
     }
 
     Rectangle {
@@ -58,7 +64,7 @@ Window {
         STView {
             id: stView
             anchors.fill: parent
-            duration: 800
+            duration: 1500
         }
     }
 
@@ -97,50 +103,8 @@ Window {
                 MouseArea {
                     anchors.fill: parent
                     onClicked: {
-                        listView.currentIndex = index
-                        if( effect == "Wind" ) {
-                            stView.transition = ShaderTransitionView.EffectWIND
-                        } else if( effect == "VerticalWind" ) {
-                            stView.transition = ShaderTransitionView.EffectVERTICALWIND
-                        } else if( effect == "PinWheel" ) {
-                            stView.transition = ShaderTransitionView.EffectPINWHEEL
-                        } else if( effect == "CircleOpen" ) {
-                            stView.transition = ShaderTransitionView.EffectCIRCLEOPEN
-                        } else if( effect == "DirectionalWipe" ) {
-                            stView.transition = ShaderTransitionView.EffectDIRECTIONALWIPE
-                        } else if( effect == "Flip" ) {
-                            stView.transition = ShaderTransitionView.EffectFLIP
-                        } else if( effect == "Fold" ) {
-                            stView.transition = ShaderTransitionView.EffectFOLD
-                        } else if( effect == "Doorway" ) {
-                            stView.transition = ShaderTransitionView.EffectDOORWAY
-                        } else if( effect == "FadeColor" ) {
-                            stView.transition = ShaderTransitionView.EffectFADECOLOR
-                        } else if( effect == "MORPH" ) {
-                            stView.transition = ShaderTransitionView.EffectMORPH
-                        } else if( effect == "PolkaDots" ) {
-                            stView.transition = ShaderTransitionView.EffectPOLKADOTS
-                        } else if( effect == "Squeeze" ) {
-                            stView.transition = ShaderTransitionView.EffectSQUEEZE
-                        } else if( effect == "RadialWipe" ) {
-                            stView.transition = ShaderTransitionView.EffectRADIALWIPE
-                        } else if( effect == "HorizontalSlide" ) {
-                            stView.transition = ShaderTransitionView.EffectHORIZONTALSLIDE
-                        } else if( effect == "VerticalSlide" ) {
-                            stView.transition = ShaderTransitionView.EffectVERTICALSLIDE
-                        } else if( effect == "CrossZoom" ) {
-                            stView.transition = ShaderTransitionView.EffectCROSSZOOM
-                        } else if( effect == "Swirl" ) {
-                            stView.transition = ShaderTransitionView.EffectSWIRL
-                        } else if( effect == "Pixelize" ) {
-                            stView.transition = ShaderTransitionView.EffectPIXELIZE
-                        } else if( effect == "LinearBlur" ) {
-                            stView.transition = ShaderTransitionView.EffectLINEARBLUR
-                        } else if( effect == "Swap" ) {
-                            stView.transition = ShaderTransitionView.EffectSWAP
-                        } else if( effect == "CrossHatch" ) {
-                            stView.transition = ShaderTransitionView.EffectCROSSHATCH
-                        }
+                        listView.currentIndex = index;
+                        stView.transition = effect;
 
                     }
                 }
