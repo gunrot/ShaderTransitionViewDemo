@@ -44,6 +44,11 @@ Window {
         ListElement { effect: "GlitchDisplace" }
         ListElement { effect: "DoomScreen" }
         ListElement { effect: "Kaleidoscope" }
+        ListElement { effect: "DefocusBlur" }
+        ListElement { effect: "Flyeye" }
+        ListElement { effect: "RandomSquares" }
+        ListElement { effect: "Reveal" }
+        ListElement { effect: "CircleCrop" }
     }
 
     Rectangle {
