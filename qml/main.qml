@@ -49,6 +49,11 @@ Window {
         ListElement { effect: "RandomSquares" }
         ListElement { effect: "Reveal" }
         ListElement { effect: "CircleCrop" }
+        ListElement { effect: "StereoViewer" }
+        ListElement { effect: "PuzzleRight" }
+        ListElement { effect: "WarpFade" }
+        ListElement { effect: "AtmosphericSlideshow" }
+
     }
 
     Rectangle {
