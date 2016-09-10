@@ -17,6 +17,10 @@ Window {
 
     ListModel {
         id: modelShaders
+        ListElement { effect: "CrazyParametricFun" }
+        ListElement { effect: "Mosaic" }
+        ListElement { effect: "Bounce" }
+        ListElement { effect: "ColourDistance" }
         ListElement { effect: "Wind" }
         ListElement { effect: "VerticalWind" }
         ListElement { effect: "PinWheel" }
@@ -28,7 +32,7 @@ Window {
         ListElement { effect: "Fold" }
         ListElement { effect: "Doorway" }
         ListElement { effect: "FadeColor" }
-        ListElement { effect: "MORPH" }
+        ListElement { effect: "Morph" }
         ListElement { effect: "PolkaDots" }
         ListElement { effect: "Squeeze" }
         ListElement { effect: "HorizontalSlide" }

@@ -13,9 +13,11 @@ MyPage {
 
     Plugin {
         id: pluginOSM
-        name: "osm"
-    }
-
+        name: "mapbox"
+        PluginParameter {name:"mapbox.access_token"; value: "pk.eyJ1IjoiZ3Vucm90IiwiYSI6IjgxZGRiZjc2NmIwNmNiNGMzNTZjZTc1NjBhM2U1OTdhIn0.RySHnxEQAfhJlWayG7e9qg" }
+        PluginParameter {name:"mapbox.map_id" ; value:  "mapbox.mapbox-terrain-v2" }
+	}	
+	
     Rectangle {
         id: mapWrapper
         anchors.top: parent.top
