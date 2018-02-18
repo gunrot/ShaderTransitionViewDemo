@@ -17,46 +17,63 @@ Window {
 
     ListModel {
         id: modelShaders
-        ListElement { effect: "CrazyParametricFun" }
-        ListElement { effect: "Mosaic" }
-        ListElement { effect: "Bounce" }
+        ListElement { effect: "Dreamy" }
+        ListElement { effect: "Squareswire" }
         ListElement { effect: "ColourDistance" }
-        ListElement { effect: "Wind" }
-        ListElement { effect: "VerticalWind" }
-        ListElement { effect: "PinWheel" }
-        ListElement { effect: "CircleOpen" }
-        ListElement { effect: "DirectionalWipe" }
-        ListElement { effect: "RadialWipe" }
-        ListElement { effect: "Pixelize" }
-        ListElement { effect: "Flip" }
-        ListElement { effect: "Fold" }
-        ListElement { effect: "Doorway" }
-        ListElement { effect: "FadeColor" }
-        ListElement { effect: "Morph" }
-        ListElement { effect: "PolkaDots" }
-        ListElement { effect: "Squeeze" }
-        ListElement { effect: "HorizontalSlide" }
-        ListElement { effect: "VerticalSlide" }
-        ListElement { effect: "CrossZoom" }
-        ListElement { effect: "Swirl" }
-        ListElement { effect: "LinearBlur" }
+        ListElement { effect: "WipeLeft" }
+        ListElement { effect: "WipeRight" }
         ListElement { effect: "Swap" }
-        ListElement { effect: "CrossHatch" }
-        ListElement { effect: "BurnOut" }
-        ListElement { effect: "Cube" }
-        ListElement { effect: "PageCurl" }
-        ListElement { effect: "GlitchDisplace" }
-        ListElement { effect: "DoomScreen" }
+        ListElement { effect: "Angular" }
+        ListElement { effect: "Swirl" }
+        ListElement { effect: "Burn" }
+        ListElement { effect: "UndulatingBurnOut" }
+        ListElement { effect: "ButterflyWaveScrawler" }
+        ListElement { effect: "Hexagonalize" }
+        ListElement { effect: "Directionalwarp" }
+        ListElement { effect: "Radial" }
+        ListElement { effect: "Luminance_melt" }
+        ListElement { effect: "Rotate_scale_fade" }
         ListElement { effect: "Kaleidoscope" }
-        ListElement { effect: "DefocusBlur" }
+        ListElement { effect: "DirectionalWipe" }
+        ListElement { effect: "ZoomInCircles" }
         ListElement { effect: "Flyeye" }
-        ListElement { effect: "RandomSquares" }
-        ListElement { effect: "Reveal" }
         ListElement { effect: "CircleCrop" }
-        ListElement { effect: "StereoViewer" }
-        ListElement { effect: "PuzzleRight" }
-        ListElement { effect: "WarpFade" }
-        ListElement { effect: "AtmosphericSlideshow" }
+        ListElement { effect: "GridFlip" }
+        ListElement { effect: "PinWheel" }
+        ListElement { effect: "WipeUp" }
+        ListElement { effect: "CrazyParametricFun" }
+        ListElement { effect: "Multiply_blend" }
+        ListElement { effect: "DreamyZoom" }
+        ListElement { effect: "Polar_function" }
+        ListElement { effect: "Windowblinds" }
+        ListElement { effect: "CrossZoom" }
+        ListElement { effect: "Bounce" }
+        ListElement { effect: "Pixelize" }
+        ListElement { effect: "Fade" }
+        ListElement { effect: "Ripple" }
+        ListElement { effect: "Cube" }
+        ListElement { effect: "Morph" }
+        ListElement { effect: "Crosswarp" }
+        ListElement { effect: "VerticalSlide" }
+        ListElement { effect: "Circle" }
+        ListElement { effect: "DoomScreenTransition" }
+        ListElement { effect: "Luma" }
+        ListElement { effect: "Heart" }
+        ListElement { effect: "Cannabisleaf" }
+        ListElement { effect: "Mosaic" }
+        ListElement { effect: "Perlin" }
+        ListElement { effect: "Wind" }
+        ListElement { effect: "Squeeze" }
+        ListElement { effect: "CircleOpen" }
+        ListElement { effect: "Doorway" }
+        ListElement { effect: "Fadegrayscale" }
+        ListElement { effect: "FadeColor" }
+        ListElement { effect: "RandomSquares" }
+        ListElement { effect: "CrossHatch" }
+        ListElement { effect: "Colorphase" }
+        ListElement { effect: "HorizontalSlide" }
+        ListElement { effect: "WipeDown" }
+        ListElement { effect: "GlitchDisplace" }
 
     }
 
@@ -78,7 +95,7 @@ Window {
         STView {
             id: stView
             anchors.fill: parent
-            duration: 1500
+            duration: 900
         }
     }
 
