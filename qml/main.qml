@@ -15,67 +15,6 @@ Window {
         source: "qrc:/qml/background1.jpg"
     }
 
-    ListModel {
-        id: modelShaders
-        ListElement { effect: "Dreamy" }
-        ListElement { effect: "Squareswire" }
-        ListElement { effect: "ColourDistance" }
-        ListElement { effect: "WipeLeft" }
-        ListElement { effect: "WipeRight" }
-        ListElement { effect: "Swap" }
-        ListElement { effect: "Angular" }
-        ListElement { effect: "Swirl" }
-        ListElement { effect: "Burn" }
-        ListElement { effect: "UndulatingBurnOut" }
-        ListElement { effect: "ButterflyWaveScrawler" }
-        ListElement { effect: "Hexagonalize" }
-        ListElement { effect: "Directionalwarp" }
-        ListElement { effect: "Radial" }
-        ListElement { effect: "Luminance_melt" }
-        ListElement { effect: "Rotate_scale_fade" }
-        ListElement { effect: "Kaleidoscope" }
-        ListElement { effect: "DirectionalWipe" }
-        ListElement { effect: "ZoomInCircles" }
-        ListElement { effect: "Flyeye" }
-        ListElement { effect: "CircleCrop" }
-        ListElement { effect: "GridFlip" }
-        ListElement { effect: "PinWheel" }
-        ListElement { effect: "WipeUp" }
-        ListElement { effect: "CrazyParametricFun" }
-        ListElement { effect: "Multiply_blend" }
-        ListElement { effect: "DreamyZoom" }
-        ListElement { effect: "Polar_function" }
-        ListElement { effect: "Windowblinds" }
-        ListElement { effect: "CrossZoom" }
-        ListElement { effect: "Bounce" }
-        ListElement { effect: "Pixelize" }
-        ListElement { effect: "Fade" }
-        ListElement { effect: "Ripple" }
-        ListElement { effect: "Cube" }
-        ListElement { effect: "Morph" }
-        ListElement { effect: "Crosswarp" }
-        ListElement { effect: "VerticalSlide" }
-        ListElement { effect: "Circle" }
-        ListElement { effect: "DoomScreenTransition" }
-        ListElement { effect: "Luma" }
-        ListElement { effect: "Heart" }
-        ListElement { effect: "Cannabisleaf" }
-        ListElement { effect: "Mosaic" }
-        ListElement { effect: "Perlin" }
-        ListElement { effect: "Wind" }
-        ListElement { effect: "Squeeze" }
-        ListElement { effect: "CircleOpen" }
-        ListElement { effect: "Doorway" }
-        ListElement { effect: "Fadegrayscale" }
-        ListElement { effect: "FadeColor" }
-        ListElement { effect: "RandomSquares" }
-        ListElement { effect: "CrossHatch" }
-        ListElement { effect: "Colorphase" }
-        ListElement { effect: "HorizontalSlide" }
-        ListElement { effect: "WipeDown" }
-        ListElement { effect: "GlitchDisplace" }
-
-    }
 
     Rectangle {
         id: wrapperContent
@@ -95,7 +34,7 @@ Window {
         STView {
             id: stView
             anchors.fill: parent
-            duration: 900
+            duration: 2000
         }
     }
 
@@ -115,7 +54,7 @@ Window {
             id: listView
             clip: true
             anchors.fill: parent
-            model: modelShaders
+            model: GlTransitions.getEffects()
             spacing: 5
             focus: true
             delegate: Rectangle {
@@ -128,14 +67,14 @@ Window {
                 Text {
                     color: delegateWrapper.ListView.isCurrentItem ? "white" : "lightgrey"
                     anchors.centerIn: parent
-                    text: effect
+                    text: modelData
                     font.bold: delegateWrapper.ListView.isCurrentItem ? true : false
                 }
                 MouseArea {
                     anchors.fill: parent
                     onClicked: {
                         listView.currentIndex = index;
-                        stView.transition = effect;
+                        stView.transition = modelData;
 
                     }
                 }
